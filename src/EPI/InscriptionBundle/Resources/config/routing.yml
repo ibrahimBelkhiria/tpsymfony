@@ -1,0 +1,32 @@
+epi_inscription_homepage:
+    path:     /
+    defaults: { _controller: EPIInscriptionBundle:Default:index }
+
+
+layout:
+    path:  /layout
+    defaults : { _controller: EPIInscriptionBundle:Inscription:layout }
+
+voir:
+    path:     /voir/{id}
+    defaults: { _controller: EPIInscriptionBundle:Inscription:voir }
+    requirements:
+        id: \d+
+
+index:
+    path:     /accueil
+    defaults: { _controller: EPIInscriptionBundle:Inscription:index }
+
+
+ajouter:
+    path:     /ajouter
+    defaults: { _controller: EPIInscriptionBundle:Inscription:ajouter }
+
+supprimer:
+    path:     /supprimer/{id}
+    defaults: { _controller: EPIInscriptionBundle:Inscription:supprimer }
+
+
+modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: EPIInscriptionBundle:Inscription:modifier }

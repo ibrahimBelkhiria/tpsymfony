@@ -1,0 +1,30 @@
+{% extends '@EPIInscription/layout.html.twig'%}
+
+{% block title %}{{ parent() }}-voir {% endblock %}
+{% block titre %}{{ parent()|upper }}-voir un job {% endblock %}
+
+{% block inscriptionBundle_body %}
+
+<h1>Detail de job n°:{{job.id}} </h1>
+    <h2>jOBTYPE :{{ job.type }}</h2>
+    <h2>jOBTYPE :{{ job.company }}</h2>
+    <h2>Descrption:{{ job.description }}</h2>
+
+    <h2>Date d'inscription{{ job.expiresAt |date('d/m/y') }}</h2>
+
+
+    {#<img src="{{ job.image.url }}" alt="{{ job.image.alt }}" height="250" width="250" />#}
+    <h1>les lites de candidatures</h1>
+    <h3>Condidatures</h3>
+    <ul class="nav nav-pills nav-stacked">
+
+        {% for condidature in listcondidatures %}
+
+            <li><h4>Condidat</h4>{{ condidature.condidat }}</li>
+            <li><h4>Contenu</h4>{{ condidature.contenu }}</li>
+            <li><h4>Data</h4>{{ condidature.date |date('d/m/y') }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

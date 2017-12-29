@@ -1,0 +1,7 @@
+epi_inscription:
+    resource: "@EPIInscriptionBundle/Resources/config/routing.yml"
+    prefix:   /job
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

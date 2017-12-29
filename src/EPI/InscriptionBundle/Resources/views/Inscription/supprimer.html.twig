@@ -1,0 +1,18 @@
+{% extends '@EPIInscription/layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/supprimer.css') }}">
+{% endblock %}
+
+
+    {% block title %}{{ parent() }} -supprimer {% endblock %}
+    {% block titre %} {{ parent() |upper }} - Supprission des job {% endblock %}
+
+{% block inscriptionBundle_body %}
+
+        <h1>Bonjour</h1>
+
+<p>Etes vous sur de vouloir supprimer le job ayant l'id : {{ id }} </p>
+
+{% endblock %}

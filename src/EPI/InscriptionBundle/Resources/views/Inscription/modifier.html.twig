@@ -1,0 +1,12 @@
+{% extends '@EPIInscription/layout.html.twig' %}
+
+   {% block title %}{{ parent() }} -Modifier {% endblock %}
+    {% block titre %} {{ parent() |upper }} - Modifier le job {% endblock %}
+
+{% block inscriptionBundle_body %}
+
+    {{ include('@EPIInscription/Inscription/form.html.twig') }}
+
+    <p>Attention: ce job  sera modifieé </p>
+
+{% endblock %}

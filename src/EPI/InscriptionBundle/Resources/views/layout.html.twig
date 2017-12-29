@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+    {% block title %}{{ parent() }} -Inscription {% endblock %}
+    {% block titre %} {{ parent() |upper }} - Inscription Bundle {% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+    <div id="menu" class="col-md-3" >
+        {{ render(controller('EPIInscriptionBundle:Inscription:menu')) }}
+    </div>
+
+    <div id="content" class="col-md-9">
+
+
+        {% block inscriptionBundle_body %} {% endblock %}
+    </div>
+        </div>
+
+    </div>
+{% endblock %}
